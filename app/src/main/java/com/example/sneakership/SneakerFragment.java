@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,8 +23,12 @@ import retrofit2.Response;
 
 public class SneakerFragment extends Fragment {
     private RecyclerView recyclerView;
-    private ArrayList<ResponseDTO> responseList;
+    private ArrayList<ResponseDTO> responseList = new ArrayList<>();
     private PostAdapter postAdapter;
+    private TextView mTvSneakerShip;
+    private TextView mTvPopular;
+    private TextView mTvSortBy;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -64,5 +69,8 @@ public class SneakerFragment extends Fragment {
 
     private void initView(View view) {
         recyclerView = view.findViewById(R.id.recyclerView);
+        mTvSneakerShip = view.findViewById(R.id.TvSneakerShip);
+        mTvPopular = view.findViewById(R.id.TvPopular);
+        mTvSortBy = view.findViewById(R.id.TvsortBy);
     }
 }

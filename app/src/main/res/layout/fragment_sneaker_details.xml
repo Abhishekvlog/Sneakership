@@ -1,14 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SneakerDetailsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="300dp"
+        android:src="@color/black"
+        android:scaleType="centerCrop"
+        android:id="@+id/ImageDetail"
+        />
+    <TextView
+        android:id="@+id/tvNamedetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ImageDetail"
+        android:layout_marginTop="20dp"
+        android:text="Nike Air Max 2021"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/tvBranddetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvNamedetail"
+        android:layout_marginTop="20dp"
+        android:text="Brand"
+        android:layout_marginStart="15dp"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/tvYeardetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBranddetail"
+        android:layout_marginTop="20dp"
+        android:text="Year"
+        android:layout_marginStart="15dp"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvPrisedetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvYeardetail"
+        android:layout_marginTop="20dp"
+        android:text="Prise"
+        android:layout_marginStart="15dp"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+    <Button
+        android:id="@+id/addtocard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add to card"
+        android:textAllCaps="false"
+        android:layout_below="@id/tvPrisedetail"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
