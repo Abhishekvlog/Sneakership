@@ -21,7 +21,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class SneakerFragment extends Fragment {
+public class SneakerFragment extends Fragment implements  onItemClick {
     private RecyclerView recyclerView;
     private ArrayList<ResponseDTO> responseList = new ArrayList<>();
     private PostAdapter postAdapter;
@@ -61,7 +61,7 @@ public class SneakerFragment extends Fragment {
     }
 
     private void setRecyclerView() {
-        postAdapter = new PostAdapter(responseList);
+        postAdapter = new PostAdapter(responseList, this);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext() , 2);
         recyclerView.setAdapter(postAdapter);
         recyclerView.setLayoutManager(gridLayoutManager);
@@ -72,5 +72,11 @@ public class SneakerFragment extends Fragment {
         mTvSneakerShip = view.findViewById(R.id.TvSneakerShip);
         mTvPopular = view.findViewById(R.id.TvPopular);
         mTvSortBy = view.findViewById(R.id.TvsortBy);
+    }
+
+
+    @Override
+    public void onItemClicked(int position, ResponseDTO responseDTO) {
+
     }
 }

@@ -13,6 +13,7 @@
         android:layout_marginTop="15dp"
         android:id="@+id/TvSneakerShip"
         android:layout_marginStart="15sp"/>
+
     <androidx.appcompat.widget.SearchView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,11 +44,11 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TvPopular"
-        android:layout_marginTop="20dp"
-        android:id="@+id/recyclerView"/>
+        android:layout_marginTop="20dp" />
 
 
 </RelativeLayout>
