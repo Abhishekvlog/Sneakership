@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SneakerFragment">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SneakerShip"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:id="@+id/TvSneakerShip"
+        android:layout_marginStart="15sp"/>
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300sp"
+        android:layout_marginTop="15sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popular"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/TvSneakerShip"
+        android:layout_marginTop="15dp"
+        android:id="@+id/TvPopular"
+        android:layout_marginStart="15sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort by "
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_below="@+id/TvSneakerShip"
+        android:layout_marginTop="15dp"
+        android:id="@+id/TvsortBy"
+        android:layout_marginStart="300sp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TvPopular"
+        android:layout_marginTop="20dp"
+        android:id="@+id/recyclerView"/>
+
+
+</RelativeLayout>
